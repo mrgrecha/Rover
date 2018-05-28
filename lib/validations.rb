@@ -1,5 +1,4 @@
 module Validations
-
   def validate_step(current_position)
     return if check_presence_on_map(current_position)
     raise RuntimeError, 'Transport is out of map'
