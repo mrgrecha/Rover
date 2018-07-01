@@ -3,14 +3,15 @@ module FileParser
   def get_data_from_file(filename)
     lines = File.read(filename).lines
     result = []
-    size = get_size_of_map(lines.first).to_a      
+    size = get_size_of_map(lines.first).to_a
     lines.slice(1..lines.size).each_slice(2) do |rover_info_lines|
-      result << format_output_data(get_coordinates_and_direction(rover_info_lines.first), get_instructions(rover_info_lines.last))
+      result << format_output_data(get_coordinates_and_direction(rover_info_lines.first),
+                                   get_instructions(rover_info_lines.last))
     end
     [size, result]
   end
 
-  private 
+  private
 
   def get_size_of_map(map_line)
     map_line.split.map(&:to_i)

@@ -7,6 +7,6 @@ class StepLogger < MethodDecorators::Decorator
   private
 
   def log_step(current_position, current_orientation)
-     puts "Your current position is #{current_position.join(' ')} and orientation is #{current_orientation}."
+    puts "Your current position is #{current_position.join(' ')} and orientation is #{current_orientation}."
   end
 end

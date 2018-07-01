@@ -1,15 +1,10 @@
-require 'pry'
 require 'Matrix'
 require 'method_decorators'
-require_relative 'lib/helpers'
-require_relative 'lib/command_executor'
-require_relative 'lib/file_parser'
 require_relative 'lib/validations'
 require_relative 'lib/step_logger'
-require_relative 'lib/rover'
 require_relative 'lib/solutions/solution'
-require_relative 'lib/solutions/linear_solution'
-require_relative 'lib/solutions/tokenize_solution'
+
+Dir['./lib/**/*.rb'].each { |file| require_relative file }
 
 include Helpers
 include FileParser
