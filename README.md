@@ -2,6 +2,8 @@
 
 To run application:<br/>
 `ruby app.rb <input_file_path>`<br/>
+or you can run it with default file example_input.txt:<br/>
+`ruby app.rb`<br/>
 or you can launch in debug mode:<br/>
 `ruby app.rb <input_file_path> true`<br/>
 
@@ -54,3 +56,5 @@ MMRMMRMRRM
 
 5 1 E
 ```
+### Contribution
+You can add your solution with Pull Request. Everything you need is just inherit your solution from class Solution and override post_initialize and preprocess_instructions if you need. You can also create your own command_executor if you need.
