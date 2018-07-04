@@ -19,7 +19,7 @@ RSpec.describe CommandExecutor do
       executor.execute_instructions([2])
     end
 
-    it 'raises error if instruction is incorrect' do
+    it 'raises an error if instruction is incorrect' do
       expect { executor.execute_instructions(['foo']) }.to raise_error(ArgumentError)
     end
   end

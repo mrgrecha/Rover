@@ -60,6 +60,11 @@ class TokenizeSolution < Solution
 
   def simplify_orientation
     number_of_steps = step_orientation.remainder(4)
+    if number_of_steps == 3
+      number_of_steps = -1
+    elsif number_of_steps == -3
+      number_of_steps = 1
+    end
     number_of_steps > 0 ? ['R'] * number_of_steps : ['L'] * (number_of_steps * -1)
   end
 end
