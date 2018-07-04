@@ -1,15 +1,10 @@
-require 'Matrix'
-require 'method_decorators'
-require_relative 'lib/validations'
-require_relative 'lib/step_logger'
-require_relative 'lib/solutions/solution'
-
-Dir['./lib/**/*.rb'].each { |file| require_relative file }
+require_relative './requirments'
 
 include Helpers
 include FileParser
 
-filename = ARGV.first
+TEST = false
+filename = ARGV.first || './example_input.txt'
 DEBUG_MODE = true?(ARGV[1])
 
 MAP_SIZE, array_of_rover_data = get_data_from_file(filename)

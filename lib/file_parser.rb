@@ -1,5 +1,4 @@
 module FileParser
-
   def get_data_from_file(filename)
     lines = File.read(filename).lines
     result = []
@@ -32,5 +31,4 @@ module FileParser
       instructions: instructions
     }
   end
-
 end

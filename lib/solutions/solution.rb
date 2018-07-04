@@ -20,5 +20,6 @@ class Solution
 
   def post_initialize; end
 
+  # Instruction preprocessing means converting string instructions to array that consists only 'L', 'R' or integers(moving forward)
   def preprocess_instructions; end
 end

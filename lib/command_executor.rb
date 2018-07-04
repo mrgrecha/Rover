@@ -18,7 +18,7 @@ class CommandExecutor
         raise ArgumentError, "Not expected instruction #{instruction}"
       end
     end
-    show_result
+    show_result unless TEST
   end
 
   private
